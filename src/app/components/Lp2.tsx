@@ -25,7 +25,7 @@ export default function Lp2() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          <Title style={{ textAlign: "justify", fontWeight: 600 }}>
+          <Title style={{ fontWeight: 600 }}>
             Why We're Your Top Choice for Loads Transport
           </Title>
 
