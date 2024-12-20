@@ -5,7 +5,7 @@ import { Col, Divider, List, Rate, Row } from "antd";
 import happy from "../../../public/happy.jpg";
 import Title from "antd/es/typography/Title";
 
-export default function LandingPage() {
+export default function Lp2() {
   return (
     <Row
       style={{
