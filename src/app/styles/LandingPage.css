@@ -18,6 +18,12 @@
     padding-top: 0;
     margin: 8px;
   }
+  .footer-main {
+    padding: 15;
+  }
+  .f-resources {
+    padding-top: 20;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -42,6 +48,9 @@
   .main-Lp6 {
     padding-top: 50;
   }
+  .footer-main {
+    padding: 50;
+  }
 }
 .List {
   border: 1px solid rgb(173, 129, 129);
@@ -56,3 +65,7 @@
 #offeringTxt {
   color: rgb(111, 25, 25);
 }
+.footer-main {
+  background-color: rgb(247, 212, 212);
+}
+
