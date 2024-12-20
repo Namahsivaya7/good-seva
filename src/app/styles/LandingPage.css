@@ -11,6 +11,9 @@
   .Flex-Lp4 {
     margin-top: 20;
   }
+  .banner-main {
+    height: 60vh;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -26,6 +29,12 @@
   .Flex-Lp4 {
     margin-top: 50;
   }
+  .banner {
+    padding-top: 200;
+  }
+  .banner-main {
+    height: 110vh;
+  }
 }
 .List {
   border: 1px solid rgb(173, 129, 129);
@@ -37,6 +46,6 @@
   transition: border-color 0.3 ease;
   border-color: aqua;
 }
-#offeringTxt{
-    color: rgb(111, 25, 25);
+#offeringTxt {
+  color: rgb(111, 25, 25);
 }
