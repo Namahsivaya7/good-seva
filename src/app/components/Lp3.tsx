@@ -15,7 +15,7 @@ export default function Lp3() {
       className="L3Main"
     >
       <Row gutter={[16, 16]} justify="center">
-        <Col xs={24} sm={20} md={10} lg={8}>
+        <Col xs={24} sm={20} md={10} lg={8} >
           <Image
             src={lorry}
             alt="lorry"
@@ -27,7 +27,7 @@ export default function Lp3() {
           />
         </Col>
 
-        <Col xs={24} sm={20} md={12} lg={10}>
+        <Col xs={24} sm={20} md={12} lg={10} >
           <div>
             <Title level={2} style={{ color: "white" }}>
               <span style={{ color: "yellow" }}>About Us:</span> Your Reliable
