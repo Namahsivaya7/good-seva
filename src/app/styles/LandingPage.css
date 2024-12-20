@@ -1,13 +1,42 @@
-@media screen and (min-device-width: 390px) and (max-device-width: 844px) {
-    .L3Main {
-        padding: 15px;
-    }
+@media screen and (min-device-width: 390px) and (max-device-width: 882px) {
+  .L3Main {
+    padding: 15px;
+  }
+  .Lp4Main {
+    margin: 15px;
+  }
+  .Lp4MainTitle {
+    font-size: 0px;
+  }
+  .Flex-Lp4 {
+    margin-top: 20;
+  }
 }
 
 @media (min-width: 1024px) {
-    .L3Main {
-        padding: 50px;
-       
-    }
-   
+  .L3Main {
+    padding: 50px;
+  }
+  .Lp4Main {
+    margin: 50px;
+  }
+  .Lp4MainTitle {
+    font-size: 45px;
+  }
+  .Flex-Lp4 {
+    margin-top: 50;
+  }
+}
+.List {
+  border: 1px solid rgb(173, 129, 129);
+  padding: 30;
+  border-radius: 30px;
+}
+
+.List:hover {
+  transition: border-color 0.3 ease;
+  border-color: aqua;
+}
+#offeringTxt{
+    color: rgb(111, 25, 25);
 }

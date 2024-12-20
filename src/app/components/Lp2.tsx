@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import "../page.module.css";
-import { Col, Divider, List, Rate, Row } from "antd";
+import { Col, Divider, Flex, List, Rate, Row } from "antd";
 import happy from "../../../public/happy.jpg";
 import Title from "antd/es/typography/Title";
 
@@ -94,15 +94,16 @@ export default function Lp2() {
             }}
           />
 
-          <div
+          <Flex
             style={{
               height: "200px",
               backgroundColor: "black",
               borderRadius: "30px",
               color: "white",
               padding: "20px",
-              textAlign: "center",
             }}
+            vertical
+            justify="center"
           >
             <Rate value={5} />
             <Title level={3} style={{ color: "white" }}>
@@ -111,7 +112,7 @@ export default function Lp2() {
             <Title level={5} style={{ color: "white" }}>
               Lorem morbi et amet suscipit
             </Title>
-          </div>
+          </Flex>
         </div>
       </Col>
       <Col xs={0} sm={2}></Col>
