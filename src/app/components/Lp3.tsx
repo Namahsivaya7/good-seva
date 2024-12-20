@@ -27,7 +27,6 @@ export default function Lp3() {
               }}
             />
           </Col>
-
           <Col xs={24} sm={20} md={12} lg={10}>
             <div>
               <Title level={2} style={{ color: "white" }}>
@@ -39,7 +38,6 @@ export default function Lp3() {
               <Typography.Paragraph
                 style={{
                   color: "white",
-
                   lineHeight: "1.6",
                   marginBottom: "20px",
                 }}

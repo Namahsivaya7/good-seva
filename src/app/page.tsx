@@ -4,6 +4,7 @@ import Lp2 from "./components/Lp2";
 import Lp3 from "./components/Lp3";
 import Lp4 from "./components/Lp4";
 import Lp5 from "./components/Lp5";
+import Lp6 from "./components/Lp6";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Lp3 />
       <Lp4 />
       <Lp5 />
+      <Lp6 />
     </div>
   );
 }
