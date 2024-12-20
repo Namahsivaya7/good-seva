@@ -2,6 +2,7 @@ import { Col, Row, Typography } from "antd";
 import Image from "next/image";
 import lorry from "../../../public/Lorry.jpg";
 import Title from "antd/es/typography/Title";
+import "../styles/LandingPage.css";
 
 export default function Lp3() {
   return (
@@ -10,15 +11,10 @@ export default function Lp3() {
         width: "100%",
         height: "auto",
         backgroundColor: "black",
-        padding: "50px 0",
       }}
+      className="L3Main"
     >
-      <Row
-        gutter={[16, 16]}
-        justify="center"
-        align="middle"
-        
-      >
+      <Row gutter={[16, 16]} justify="center">
         <Col xs={24} sm={20} md={10} lg={8}>
           <Image
             src={lorry}
@@ -42,7 +38,7 @@ export default function Lp3() {
             <Typography.Paragraph
               style={{
                 color: "white",
-                textAlign: "justify",
+
                 lineHeight: "1.6",
                 marginBottom: "20px",
               }}
@@ -58,7 +54,7 @@ export default function Lp3() {
               placeat voluptate modi! Animi quasi sapiente consectetur quo ut
               alias accusantium itaque.
             </Typography.Paragraph>
-            <Row gutter={[16, 16]} justify="start">
+            <Row gutter={[16, 16]}>
               <Col xs={8}>
                 <Title level={3} style={{ color: "yellow", marginBottom: 0 }}>
                   32 +
