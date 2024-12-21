@@ -1,7 +1,7 @@
 import { MessageFilled } from "@ant-design/icons";
 import { Button, Col, Divider, Flex, Row, Typography } from "antd";
 import Title from "antd/es/typography/Title";
-import "../styles/LandingPage.css";
+import "../../styles/LandingPage.css";
 
 export default function FooterLp() {
   return (

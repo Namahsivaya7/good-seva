@@ -1,8 +1,8 @@
 import { Col, Flex, Row, Typography } from "antd";
 import Image from "next/image";
-import lorry from "../../../public/Lorry1.png";
+import lorry from "../../../../public/Lorry1.png";
 import Title from "antd/es/typography/Title";
-import "../styles/LandingPage.css";
+import "../../styles/LandingPage.css";
 
 export default function Lp3() {
   return (
@@ -14,7 +14,7 @@ export default function Lp3() {
       }}
       className="L3Main"
     >
-      <Row gutter={[16, 16]} >
+      <Row gutter={[16, 16]}>
         <Flex justify="center" gap={50} wrap>
           <Col xs={24} sm={20} md={10} lg={8}>
             <Image src={lorry} alt="lorry" className="Lp2-Left_img" />
@@ -29,17 +29,14 @@ export default function Lp3() {
                 Goods Moving Partner
               </Title>
 
-              <Typography.Paragraph
-               
-                className="Lp3-paragraph"
-              >
+              <Typography.Paragraph className="Lp3-paragraph">
                 Elementum fames et massa molestie. Dolor habitasse id sit cras
                 ultricies sit. Morbi sollicitudin quam enim est turpis aliquet.
                 Diam in id quis diam. Lacus vestibulum habitant sollicitudin
                 egestas. Porttitor enim duis dui in mi.
               </Typography.Paragraph>
             </div>
-            <Row gutter={[16, 16]}  className="Lp3-Head">
+            <Row gutter={[16, 16]} className="Lp3-Head">
               <Col xs={8}>
                 <Title level={3} style={{ color: "yellow", marginBottom: 0 }}>
                   32 +

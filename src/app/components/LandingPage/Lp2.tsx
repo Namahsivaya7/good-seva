@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import "../page.module.css";
+
 import { Col, Divider, Flex, List, Rate, Row, Typography } from "antd";
-import happy from "../../../public/happyness.png";
+import happy from "../../../../public/happyness.png";
 import Title from "antd/es/typography/Title";
 
 export default function Lp2() {

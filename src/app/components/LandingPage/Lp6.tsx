@@ -1,8 +1,8 @@
 import { Col, Divider, Flex, Row, Typography } from "antd";
 import Image from "next/image";
-import worker from "../../../public/happiness.png";
+import worker from "../../../../public/happiness.png";
 import Title from "antd/es/typography/Title";
-import "../styles/LandingPage.css";
+import "../../styles/LandingPage.css";
 
 export default function Lp6() {
   return (
