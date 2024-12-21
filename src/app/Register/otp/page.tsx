@@ -1,20 +1,35 @@
 "use client";
-import "../styles/RegisterPage.css";
-import {
-  FacebookOutlined,
-  GoogleOutlined,
-  MailOutlined,
-  MobileOutlined,
-  PhoneFilled,
-} from "@ant-design/icons";
+import "../../styles/OtpPage.css";
+import { PhoneFilled } from "@ant-design/icons";
 import { Button, Col, Divider, Flex, Input, Row, Typography } from "antd";
 
-export default function RegisterPage() {
+import type { GetProps } from "antd";
+import Link from "next/link";
+
+type OTPProps = GetProps<typeof Input.OTP>;
+
+export default function OtpPage() {
+  const onChange: OTPProps["onChange"] = (text) => {
+    console.log("onChange:", text);
+  };
+
+  const onInput: OTPProps["onInput"] = (value) => {
+    console.log("onInput:", value);
+  };
+
+  const sharedProps: OTPProps = {
+    onChange,
+    onInput,
+  };
   return (
     <div className="bg-lp">
       <div>
         <Row>
-          <Col sm={12}></Col>
+          <Col sm={12} style={{padding:8}}>
+            <Typography.Text style={{ color: "white" }}>
+              Your Registered Email/Phone Number
+            </Typography.Text>
+          </Col>
 
           <Col sm={12} className="bg-lp-div">
             <Flex justify="space-evenly" style={{ marginTop: 40 }}>
@@ -27,23 +42,17 @@ export default function RegisterPage() {
             <Typography.Title style={{ textAlign: "center" }} level={3}>
               Very good works are waiting for you
             </Typography.Title>
-            <Flex className="input-details" vertical gap={10} align="flex-end">
-              <Input
-                size="large"
-                placeholder=" Mobile Number"
-                prefix={<MobileOutlined />}
-                style={{ padding: 20 }}
-              />
-              <Input
-                size="large"
-                placeholder=" Email"
-                prefix={<MailOutlined />}
-                style={{ padding: 20 }}
-              />
-              <Button type="primary" danger id="otp-button">
-                <PhoneFilled />
-                Get OTP
-              </Button>
+
+            <Flex className="input-details" vertical>
+              <Flex vertical>
+                <Input.OTP {...sharedProps} />
+              </Flex>
+              <Flex justify="space-between" style={{ padding: 20 }}>
+                <Link href="/Register">Change Email/Phone number</Link>
+                <Button type="primary" danger id="otp-button">
+                  Verify
+                </Button>
+              </Flex>
             </Flex>
             <div className="providers">
               <Divider style={{ borderColor: "lightgray" }}>

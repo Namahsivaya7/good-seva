@@ -7,7 +7,9 @@ export default function Lp5() {
     <div
       style={{
         width: "100%",
-        backgroundImage: `url('../../traffics.avif')`,
+        backgroundImage: `url('../../trafficls.png')`,
+        backgroundColor: " rgba(0,0,0,0.5)",
+
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         padding: 50,

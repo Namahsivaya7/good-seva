@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import "../page.module.css";
-import { Col, Divider, Flex, List, Rate, Row } from "antd";
-import happy from "../../../public/happy.jpg";
+import { Col, Divider, Flex, List, Rate, Row, Typography } from "antd";
+import happy from "../../../public/happyness.png";
 import Title from "antd/es/typography/Title";
 
 export default function Lp2() {
@@ -25,44 +25,60 @@ export default function Lp2() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          <Title style={{ fontWeight: 600 }}>
+          <Title style={{ fontSize: 48, fontWeight: 400 }}>
             Why We're Your Top Choice for Loads Transport
           </Title>
 
           <div>
             <List>
-              <Title level={2}>Experienced Professionals</Title>
-              <List.Item>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Possimus pariatur iure tempora delectus blanditiis esse vel.
-                Eligendi enim esse dolorem magni facilis sed, culpa facere
-                dolorum aut, odit eveniet corrupti placeat, aliquid nisi minus
-                sint ducimus.
+              <Title
+                level={5}
+                style={{ fontSize: 24, fontWeight: 400, gap: 20 }}
+              >
+                Experienced Professionals
+                <sup style={{ color: "#98A393" }}>01</sup>
+              </Title>
+              <List.Item className="L2-P" style={{ color: " #808380" }}>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget donec erat ipsum a leo. Maecenas elementum consectetur ac
+                blandit tortor.
               </List.Item>
-              <Divider variant="solid" style={{ borderColor: "black" }} />
+              <Divider variant="solid" style={{ borderColor: "#98A393" }} />
             </List>
 
             <List>
-              <Title level={2}>Tailored Solutions</Title>
-              <List.Item>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Possimus pariatur iure tempora delectus blanditiis esse vel.
-                Eligendi enim esse dolorem magni facilis sed, culpa facere
-                dolorum aut, odit eveniet corrupti placeat, aliquid nisi minus
-                sint ducimus.
+              <Title
+                level={5}
+                style={{
+                  fontSize: 24,
+                  fontWeight: 400,
+                }}
+              >
+                Tailored Solutions
+                <sup style={{ color: "#98A393" }}>02</sup>
+              </Title>
+              <List.Item className="L2-P" style={{ color: " #808380" }}>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget donec erat ipsum a leo. Maecenas elementum consectetur ac
+                blandit tortor.
               </List.Item>
-              <Divider variant="solid" style={{ borderColor: "black" }} />
+              <Divider variant="solid" style={{ borderColor: "#98A393" }} />
             </List>
 
             <List>
-              <Title level={2}>Efficiency and Timeliness</Title>
-              <List.Item>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Possimus pariatur iure tempora delectus blanditiis esse vel.
-                Eligendi enim esse dolorem magni facilis sed, culpa facere
-                dolorum aut, odit eveniet corrupti placeat, aliquid nisi minus
-                sint ducimus.
+              <Title level={5} style={{ fontSize: 24, fontWeight: 400 }}>
+                Efficiency and Timeliness
+                <sup style={{ color: "#98A393" }}>03</sup>
+              </Title>
+              <List.Item className="L2-P" style={{ color: " #808380" }}>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget donec erat ipsum a leo. Maecenas elementum consectetur ac
+                blandit tortor.
               </List.Item>
+              <Divider variant="solid" style={{ borderColor: "#98A393" }} />
             </List>
           </div>
         </div>
@@ -84,34 +100,33 @@ export default function Lp2() {
             gap: "20px",
           }}
         >
-          <Image
-            src={happy}
-            alt="Happy person"
-            style={{
-              borderRadius: "30px",
-              width: "100%",
-              height: "auto",
-            }}
-          />
+          <Image src={happy} alt="Happy person" className="Lp2-right" />
 
-          <Flex
-            style={{
-              height: "200px",
-              backgroundColor: "black",
-              borderRadius: "30px",
-              color: "white",
-              padding: "20px",
-            }}
-            vertical
-            justify="center"
-          >
-            <Rate value={5} />
-            <Title level={3} style={{ color: "white" }}>
-              4.8% From customers
+          <Flex className="Lp2-ratings" vertical justify="center">
+            <Rate value={5} style={{ width: "176px", height: "32px" }} />
+            <Title
+              level={5}
+              style={{
+                color: "white",
+                fontSize: 24,
+                fontWeight: 400,
+                width: "330px",
+                height: "34px",
+              }}
+            >
+              4.8/5 Ratings From customers
             </Title>
-            <Title level={5} style={{ color: "white" }}>
+            <Typography.Text
+              style={{
+                color: "#98A393",
+                fontSize: 18,
+                fontWeight: 400,
+                width: "274px",
+                height: "29px",
+              }}
+            >
               Lorem morbi et amet suscipit
-            </Title>
+            </Typography.Text>
           </Flex>
         </div>
       </Col>
