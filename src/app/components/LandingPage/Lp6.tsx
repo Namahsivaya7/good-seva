@@ -38,9 +38,7 @@ export default function Lp6() {
           <Typography.Paragraph
             style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
           >
-            <span style={{ color: "black" }}>
-              Initial Consultation and Assessment -
-            </span>
+            <span style={{ color: "black" }}>Initial Consultation and Assessment - </span>
             Lorem morbi et amet suscipit. At sed proin quis risus urna a. Magna
             in odio in urna amet ultrices fermentum. Mauris in pretium eget.
             <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
