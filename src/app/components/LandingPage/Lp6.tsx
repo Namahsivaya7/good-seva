@@ -7,9 +7,9 @@ import "../../styles/LandingPage.css";
 export default function Lp6() {
   return (
     <div>
-      <Row style={{ display: "flex", gap: 30 }} className="main-Lp6">
-        <Col sm={2} xs={0}></Col>
-        <Col sm={8} xs={24}>
+      <Row style={{ display: "flex" }} className="main-Lp6">
+        <Col sm={0} xs={0} lg={2}></Col>
+        <Col sm={10} xs={24} lg={8}>
           <Flex vertical gap={10}>
             <Image src={worker} alt="worker" className="Lp6-Img"></Image>
             <Flex vertical>
@@ -29,47 +29,63 @@ export default function Lp6() {
             </Flex>
           </Flex>
         </Col>
-        <Col sm={11} xs={24} style={{ width: "100%" }}>
-          <Title level={2} style={{ fontSize: 48, fontWeight: 400 }}>
-            The <span id="offeringTxt">Step-by-Step</span> Guide to Your
-            Seamless Loads
-          </Title>
-
-          <Typography.Paragraph
-            style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
-          >
-            <span style={{ color: "black" }}>Initial Consultation and Assessment - </span>
-            Lorem morbi et amet suscipit. At sed proin quis risus urna a. Magna
-            in odio in urna amet ultrices fermentum. Mauris in pretium eget.
-            <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
-          </Typography.Paragraph>
-          <Typography.Paragraph
-            style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
-          >
-            <span style={{ color: "black" }}>Customized Moving Plan - </span>
-            Lorem morbi et amet suscipit. At sed proin quis risus urna a. Magna
-            in odio in urna amet ultrices fermentum. Mauris in pretium eget.
-            <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
-          </Typography.Paragraph>
-          <Typography.Paragraph
-            style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
-          >
-            <span style={{ color: "black" }}>
-              Packing and Transportation -{" "}
-            </span>
-            Lorem morbi et amet suscipit. At sed proin quis risus urna a. Magna
-            in odio in urna amet ultrices fermentum. Mauris in pretium eget.
-            <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
-          </Typography.Paragraph>
-          <Typography.Paragraph
-            style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
-          >
-            <span style={{ color: "black" }}>Delivery and Unpacking - </span>
-            Lorem morbi et amet suscipit. At sed proin quis risus urna a. Magna
-            in odio in urna amet ultrices fermentum. Mauris in pretium eget.
-          </Typography.Paragraph>
+        <Col sm={0} xs={0} lg={1}></Col>
+        <Col sm={12} xs={24} style={{ width: "100%" }} lg={11}>
+          <Flex vertical gap={50}>
+            <Flex>
+              <Title level={2} style={{ fontSize: 48, fontWeight: 400 }}>
+                The <span id="offeringTxt">Step-by-Step</span> Guide to Your
+                Seamless Loads
+              </Title>
+            </Flex>
+            <Flex vertical>
+              <Typography.Paragraph
+                style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
+              >
+                <span style={{ color: "black" }}>
+                  Initial Consultation and Assessment -{" "}
+                </span>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget.
+                <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
+              </Typography.Paragraph>
+              <Typography.Paragraph
+                style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
+              >
+                <span style={{ color: "black" }}>
+                  Customized Moving Plan -{" "}
+                </span>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget.
+                <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
+              </Typography.Paragraph>
+              <Typography.Paragraph
+                style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
+              >
+                <span style={{ color: "black" }}>
+                  Packing and Transportation -{" "}
+                </span>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget.
+                <Divider variant="solid" style={{ borderColor: "#DEE2DD" }} />
+              </Typography.Paragraph>
+              <Typography.Paragraph
+                style={{ fontSize: 18, fontWeight: 400, color: "#808380" }}
+              >
+                <span style={{ color: "black" }}>
+                  Delivery and Unpacking -{" "}
+                </span>
+                Lorem morbi et amet suscipit. At sed proin quis risus urna a.
+                Magna in odio in urna amet ultrices fermentum. Mauris in pretium
+                eget.
+              </Typography.Paragraph>
+            </Flex>
+          </Flex>
         </Col>
-        <Col sm={2} xs={0}></Col>
+        <Col sm={2} xs={0} lg={2}></Col>
       </Row>
     </div>
   );
