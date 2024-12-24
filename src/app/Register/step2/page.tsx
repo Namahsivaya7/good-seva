@@ -1,6 +1,6 @@
 "use client";
-import "../../styles/OtpPage.css";
-import { PhoneFilled } from "@ant-design/icons";
+import "../../styles/Step1.css";
+
 import {
   Button,
   Col,
@@ -100,7 +100,7 @@ export default function OtpPage() {
         </Col>
       </Row>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0}></Col>
+        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0} xs={0}></Col>
       </Row>
       <div className="bg-register-card">
         <Row>
@@ -130,9 +130,32 @@ export default function OtpPage() {
                 <span style={{ color: "white" }}>8367076177</span>
               </Flex>
             </Flex>
+            <Flex gap={5}>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.99996 0.666504L11.575 5.88317L17.3333 6.72484L13.1666 10.7832L14.15 16.5165L8.99996 13.8082L3.84996 16.5165L4.83329 10.7832L0.666626 6.72484L6.42496 5.88317L8.99996 0.666504Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <Flex vertical gap={5}>
+                <Typography.Text style={{ color: "#FFFFFF80" }}>
+                  Using this app for
+                </Typography.Text>
+                <span style={{ color: "white" }}>Company</span>
+              </Flex>
+            </Flex>
           </Col>
 
-          <Col sm={10} className="bg-lp-div" lg={8}>
+          <Col sm={24} className="bg-lp-div" lg={8} xs={24}>
             <Flex
               justify="space-between"
               style={{
@@ -150,60 +173,73 @@ export default function OtpPage() {
               </Typography.Title>
             </Flex>
             <Typography.Title
-              style={{ fontSize: 24, textAlign: "center" }}
-              level={3}
+              style={{ fontSize: 24, textAlign: "center", fontWeight: 500 }}
+              level={5}
             >
-              Very good works are waiting for you
+              Your Company category?
             </Typography.Title>
 
-            <Flex className="input-details" vertical>
-              <Flex align="flex-start" vertical justify="center">
-                <Input.OTP
-                  {...sharedProps}
-                  mask="*"
-                  size="large"
-                  id="otp-inputs"
-                />
-              </Flex>
-              <Flex justify="center" style={{ padding: 20 }} gap={50}>
-                <Link
-                  href="/Register"
-                  id="link-to-register"
-                  style={{ color: "#7F1126" }}
-                >
-                  Change Email/Phone number
-                </Link>
-                <Button id="otp-button">Verify</Button>
-              </Flex>
+            <Flex vertical gap={30} className="company-div-step2">
+              <Button
+                style={{
+                  width: "157px",
+                  height: "42px",
+                  backgroundColor: "#FEC6D1",
+                }}
+              >
+                Corporate
+              </Button>
+              <Button
+                style={{
+                  width: "157px",
+                  height: "42px",
+                  backgroundColor: "#FEC6D1",
+                }}
+              >
+                E-com
+              </Button>
+              <Button
+                style={{
+                  width: "157px",
+                  height: "42px",
+                  backgroundColor: "#FEC6D1",
+                }}
+              >
+                Export
+              </Button>
             </Flex>
-            <div className="providers">
-              <Divider style={{ borderColor: "lightgray" }}>
-                <span>
-                  <b>Login</b>
-                </span>{" "}
-                <span style={{ color: "#525252" }}>With Others</span>
-              </Divider>
-              <Flex justify="center" gap={30}>
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/google-logo.png"
-                  alt="google-logo"
-                />
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/facebook.png"
-                  alt="facebook"
-                />
-              </Flex>
-            </div>
+            <Row>
+              <Col lg={1}></Col>
+              <Col lg={23} className="backgoing-btn">
+                <Button
+                  shape="circle"
+                  icon={
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.75 10H1.25M1.25 10L10 18.75M1.25 10L10 1.25"
+                        stroke="#1E1E1E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  }
+                  onClick={() => window.history.back()}
+                ></Button>
+              </Col>
+            </Row>
           </Col>
-          <Col lg={4} sm={0}></Col>
+          <Col lg={4} sm={0} xs={0}></Col>
         </Row>
       </div>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }}></Col>
+        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0} xs={0}></Col>
       </Row>
     </div>
   );

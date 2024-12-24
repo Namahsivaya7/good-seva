@@ -1,6 +1,6 @@
 "use client";
-import "../../styles/OtpPage.css";
-import { PhoneFilled } from "@ant-design/icons";
+import "../../styles/Step1.css";
+
 import {
   Button,
   Col,
@@ -100,7 +100,7 @@ export default function OtpPage() {
         </Col>
       </Row>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0}></Col>
+        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0} xs={0}></Col>
       </Row>
       <div className="bg-register-card">
         <Row>
@@ -132,7 +132,7 @@ export default function OtpPage() {
             </Flex>
           </Col>
 
-          <Col sm={10} className="bg-lp-div" lg={8}>
+          <Col sm={24} className="bg-lp-div" lg={8} xs={24}>
             <Flex
               justify="space-between"
               style={{
@@ -150,60 +150,92 @@ export default function OtpPage() {
               </Typography.Title>
             </Flex>
             <Typography.Title
-              style={{ fontSize: 24, textAlign: "center" }}
-              level={3}
+              style={{ fontSize: 24, textAlign: "center", fontWeight: 500 }}
+              level={5}
             >
-              Very good works are waiting for you
+              Using this App for
             </Typography.Title>
 
-            <Flex className="input-details" vertical>
-              <Flex align="flex-start" vertical justify="center">
-                <Input.OTP
-                  {...sharedProps}
-                  mask="*"
-                  size="large"
-                  id="otp-inputs"
-                />
-              </Flex>
-              <Flex justify="center" style={{ padding: 20 }} gap={50}>
-                <Link
-                  href="/Register"
-                  id="link-to-register"
-                  style={{ color: "#7F1126" }}
-                >
-                  Change Email/Phone number
-                </Link>
-                <Button id="otp-button">Verify</Button>
-              </Flex>
+            <Flex vertical gap={30} className="company-div">
+              <Button
+                icon={
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 18L12 14.95L16 18L14.5 13.05L18.5 10.2H13.6L12 5L10.4 10.2H5.5L9.5 13.05L8 18ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                      fill="#49454F"
+                    />
+                  </svg>
+                }
+                style={{
+                  width: "157px",
+                  height: "42px",
+                  backgroundColor: "#FEC6D1",
+                }}
+              >
+                Company
+              </Button>
+              <Button
+                icon={
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4ZM6 18H18V17.2C18 17.0167 17.9542 16.85 17.8625 16.7C17.7708 16.55 17.65 16.4333 17.5 16.35C16.6 15.9 15.6917 15.5625 14.775 15.3375C13.8583 15.1125 12.9333 15 12 15C11.0667 15 10.1417 15.1125 9.225 15.3375C8.30833 15.5625 7.4 15.9 6.5 16.35C6.35 16.4333 6.22917 16.55 6.1375 16.7C6.04583 16.85 6 17.0167 6 17.2V18ZM12 10C12.55 10 13.0208 9.80417 13.4125 9.4125C13.8042 9.02083 14 8.55 14 8C14 7.45 13.8042 6.97917 13.4125 6.5875C13.0208 6.19583 12.55 6 12 6C11.45 6 10.9792 6.19583 10.5875 6.5875C10.1958 6.97917 10 7.45 10 8C10 8.55 10.1958 9.02083 10.5875 9.4125C10.9792 9.80417 11.45 10 12 10Z"
+                      fill="#1D1B20"
+                    />
+                  </svg>
+                }
+                style={{
+                  width: "157px",
+                  height: "42px",
+                  backgroundColor: "#FEC6D1",
+                }}
+              >
+                Personal
+              </Button>
             </Flex>
-            <div className="providers">
-              <Divider style={{ borderColor: "lightgray" }}>
-                <span>
-                  <b>Login</b>
-                </span>{" "}
-                <span style={{ color: "#525252" }}>With Others</span>
-              </Divider>
-              <Flex justify="center" gap={30}>
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/google-logo.png"
-                  alt="google-logo"
-                />
-                <img
-                  width="48"
-                  height="48"
-                  src="https://img.icons8.com/color/48/facebook.png"
-                  alt="facebook"
-                />
-              </Flex>
-            </div>
+            <Row>
+              <Col lg={1}></Col>
+              <Col lg={23} className="backgoing-btn">
+                <Button
+                  shape="circle"
+                  icon={
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.75 10H1.25M1.25 10L10 18.75M1.25 10L10 1.25"
+                        stroke="#1E1E1E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  }
+                  onClick={() => window.history.back()}
+                ></Button>
+              </Col>
+            </Row>
           </Col>
-          <Col lg={4} sm={0}></Col>
+          <Col lg={4} sm={0} xs={0}></Col>
         </Row>
       </div>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }}></Col>
+        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0} xs={0}></Col>
       </Row>
     </div>
   );

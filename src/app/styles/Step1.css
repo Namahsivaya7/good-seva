@@ -1,67 +1,54 @@
-#offeringTxt {
-  color: rgb(111, 25, 25);
-}
-
 @media screen and (min-device-width: 390px) and (max-device-width: 882px) {
-  #otp-button {
-    margin-top: 10px;
-    margin-left: 90px;
-  }
   .bg-lp-div {
     padding: 10px;
-    
   }
-  .input-details {
-    padding: 30;
-  }
+
   #Text-Register {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     margin-top: 0;
   }
-  #otp-button {
-    padding: 20;
+  #offeringTxt {
+    color: rgb(111, 25, 25);
+    font-size: 25px;
+    font-family: El Messiri;
+  }
+
+  .left-register-div {
+    background-color: #7f1126;
+    border-radius: 12px;
+    padding: 5px;
+  }
+  .left-register-div > div {
+    margin: 20px;
+  }
+  .backgoing-btn {
+    display: none;
+  }
+  .company-div {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+  .company-div-step2 {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+   #btn-step3 {
     background-color: #7f1126;
     color: white;
     width: 135px;
     height: 42px;
-    border-radius: 6px;
-  }
-   .left-register-div {
-    background-color: #7f1126;
-    border-radius: 12px;
-    padding: 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  #otp-button {
-    padding: 20;
-    background-color: #7f1126;
-    color: white;
-    width: 135px;
-    height: 42px;
-    border-radius: 6px;
-  }
-  .providers {
-    padding: 20;
-    margin: 10;
-  }
-
-  #link-to-register{
-    margin-top: 10px;
-  }
- 
-
   #Text-Register {
     font-size: 30px;
     font-weight: 500;
     margin: 0;
     margin-top: 10px;
   }
-  #otp-inputs {
-    margin-left: 60px;
-  }
+
   .main-register {
     background-color: #f8fafb;
     width: 100%;
@@ -70,7 +57,40 @@
   .left-register-div {
     background-color: #7f1126;
     border-radius: 12px;
-    padding: 10px;
+    padding: 20px;
+  }
+  .left-register-div > div {
+    margin: 20px;
+  }
+  .company-div {
+    text-align: center;
+    place-items: center;
+    margin-top: 100px;
+  }
+  .backgoing-btn {
+    margin-top: 130px;
+  }
+  #offeringTxt {
+    color: #7f1126;
+    font-size: 45px;
+    font-family: El Messiri;
+  }
+  .company-div-step2 {
+    text-align: center;
+    place-items: center;
+    margin-top: 40px;
+  }
+  .form-main {
+    padding: 20px;
+  }
+  .backgoing-btn3 {
+    margin-top: 10px;
+  }
+  #btn-step3 {
+    background-color: #7f1126;
+    color: white;
+    width: 135px;
+    height: 42px;
   }
 }
 .bg-register-card {
