@@ -15,21 +15,10 @@ import {
 
 import type { GetProps } from "antd";
 
-type OTPProps = GetProps<typeof Input.OTP>;
 
-export default function OtpPage() {
-  const onChange: OTPProps["onChange"] = (text) => {
-    console.log("onChange:", text);
-  };
 
-  const onInput: OTPProps["onInput"] = (value) => {
-    console.log("onInput:", value);
-  };
-
-  const sharedProps: OTPProps = {
-    onChange,
-    onInput,
-  };
+export default function Step3() {
+  
   return (
     <div className="main-register">
       <Row>

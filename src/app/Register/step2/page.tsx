@@ -1,35 +1,9 @@
 "use client";
 import "../../styles/Step1.css";
 
-import {
-  Button,
-  Col,
-  Divider,
-  Flex,
-  Input,
-  Row,
-  Space,
-  Typography,
-} from "antd";
+import { Button, Col, Flex, Row, Space, Typography } from "antd";
 
-import type { GetProps } from "antd";
-import Link from "next/link";
-
-type OTPProps = GetProps<typeof Input.OTP>;
-
-export default function OtpPage() {
-  const onChange: OTPProps["onChange"] = (text) => {
-    console.log("onChange:", text);
-  };
-
-  const onInput: OTPProps["onInput"] = (value) => {
-    console.log("onInput:", value);
-  };
-
-  const sharedProps: OTPProps = {
-    onChange,
-    onInput,
-  };
+export default function Step2() {
   return (
     <div className="main-register">
       <Row>
