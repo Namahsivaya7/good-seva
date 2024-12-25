@@ -25,7 +25,7 @@ export default function Lp2() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          <Title style={{ fontSize: 48, fontWeight: 400 }}>
+          <Title id="main-title-Lp2">
             Why We're Your Top Choice for Loads Transport
           </Title>
 
@@ -34,6 +34,7 @@ export default function Lp2() {
               <Title
                 level={5}
                 style={{ fontSize: 24, fontWeight: 400, gap: 20 }}
+                
               >
                 Experienced Professionals
                 <sup style={{ color: "#98A393" }}>01</sup>
@@ -103,27 +104,16 @@ export default function Lp2() {
           <Image src={happy} alt="Happy person" className="Lp2-right" />
 
           <Flex className="Lp2-ratings" vertical justify="center">
-            <Rate value={5} style={{ width: "176px", height: "32px" }} />
+            <Rate value={5} id="rating-stars"/>
             <Title
               level={5}
-              style={{
-                color: "white",
-                fontSize: 24,
-                fontWeight: 400,
-                width: "330px",
-                height: "34px",
-              }}
+              id="rating-text"
             >
               4.8/5 Ratings From customers
             </Title>
             <Typography.Text
-              style={{
-                color: "#98A393",
-                fontSize: 18,
-                fontWeight: 400,
-                width: "274px",
-                height: "29px",
-              }}
+             
+              id="rating-desc"
             >
               Lorem morbi et amet suscipit
             </Typography.Text>

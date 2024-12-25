@@ -9,7 +9,7 @@ export default function Lp6() {
     <div>
       <Row style={{ display: "flex" }} className="main-Lp6">
         <Col sm={0} xs={0} lg={2}></Col>
-        <Col sm={10} xs={24} lg={8}>
+        <Col sm={24} xs={24} lg={8}>
           <Flex vertical gap={10}>
             <Image src={worker} alt="worker" className="Lp6-Img"></Image>
             <Flex vertical>
@@ -30,10 +30,10 @@ export default function Lp6() {
           </Flex>
         </Col>
         <Col sm={0} xs={0} lg={1}></Col>
-        <Col sm={12} xs={24} style={{ width: "100%" }} lg={11}>
-          <Flex vertical gap={50}>
+        <Col sm={24} xs={24} lg={11}>
+          <Flex vertical>
             <Flex>
-              <Title level={2} style={{ fontSize: 48, fontWeight: 400 }}>
+              <Title level={2} id="main-head-Lp6">
                 The <span id="offeringTxt">Step-by-Step</span> Guide to Your
                 Seamless Loads
               </Title>

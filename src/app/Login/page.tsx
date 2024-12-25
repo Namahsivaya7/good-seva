@@ -1,12 +1,21 @@
 "use client";
 import "../styles/LoginPage.css";
 import {
-  FacebookOutlined,
-  GoogleOutlined,
+ 
   MobileOutlined,
-  PhoneFilled,
+
 } from "@ant-design/icons";
-import { Button, Col, Divider, Flex, Input, Row, Space, Typography } from "antd";
+import {
+  Button,
+  Col,
+  Divider,
+  Flex,
+  Input,
+  Row,
+  Space,
+  Typography,
+} from "antd";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -80,7 +89,7 @@ export default function LoginPage() {
           </Col>
         </Row>
         <Row>
-          <Col xs={0} sm={4} lg={8}></Col>
+          <Col xs={0} sm={0} lg={8}></Col>
           <Col lg={8} xs={24} sm={16} className="bg-lp-div">
             <Flex
               justify="space-between"
@@ -93,26 +102,13 @@ export default function LoginPage() {
                 borderColor: "#B0B0B0",
               }}
             >
-              <Typography.Title
-                id="offeringTxt"
-                style={{
-                  fontFamily: "El Messiri",
-                  fontSize: 45,
-                  fontWeight: 700,
-                  marginTop: 20,
-                }}
-              >
+              <Typography.Title id="offeringTxt" style={{}}>
                 goodSeva
               </Typography.Title>
-              <Typography.Title style={{ fontSize: 30, fontWeight: 500 }}>
-                LOGIN
-              </Typography.Title>
+              <Typography.Title id="login-text">LOGIN</Typography.Title>
             </Flex>
 
-            <Typography.Title
-              style={{ textAlign: "center", fontSize: 24 }}
-              level={3}
-            >
+            <Typography.Title level={3} id="login-para">
               Very good works are waiting for you
             </Typography.Title>
             <div className="input-details">
@@ -122,7 +118,9 @@ export default function LoginPage() {
                 prefix={<MobileOutlined />}
                 className="input-login"
               />
-              <Button id="otp-button">Get OTP</Button>
+              <Link href={"/Login/otp"}>
+                <Button id="otp-button">Get OTP</Button>
+              </Link>
             </div>
             <div className="providers">
               <Divider style={{ borderColor: "lightgray" }}>

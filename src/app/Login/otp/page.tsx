@@ -1,6 +1,6 @@
 "use client";
-import "../styles/RegisterPage.css";
-import { MailOutlined, MobileOutlined } from "@ant-design/icons";
+import "../../styles/OtpPage.css";
+import { PhoneFilled } from "@ant-design/icons";
 import {
   Button,
   Col,
@@ -11,12 +11,25 @@ import {
   Space,
   Typography,
 } from "antd";
-import Link from "next/link";
-import { useState } from "react";
 
-export default function RegisterPage() {
-  const [mobileNo, setMobileNo] = useState("");
-  const [mail, setMail] = useState("");
+import type { GetProps } from "antd";
+import Link from "next/link";
+
+type OTPProps = GetProps<typeof Input.OTP>;
+
+export default function OtpPage() {
+  const onChange: OTPProps["onChange"] = (text) => {
+    console.log("onChange:", text);
+  };
+
+  const onInput: OTPProps["onInput"] = (value) => {
+    console.log("onInput:", value);
+  };
+
+  const sharedProps: OTPProps = {
+    onChange,
+    onInput,
+  };
   return (
     <div className="main-register">
       <Row>
@@ -87,14 +100,13 @@ export default function RegisterPage() {
         </Col>
       </Row>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }} sm={0} xs={0}></Col>
+        <Col lg={24} style={{ width: "100%", height: "50px" }} sm={0} xs={0}></Col>
       </Row>
       <div className="bg-register-card">
         <Row>
-          <Col lg={4} sm={0} xs={0}></Col>
-          <Col sm={14} lg={8} xs={0} className="left-register-div"></Col>
+          <Col sm={24} lg={8} xs={24}></Col>
 
-          <Col sm={24} className="bg-lp-div" lg={8} xs={24}>
+          <Col sm={10} className="bg-lp-div" lg={8}>
             <Flex
               justify="space-between"
               style={{
@@ -108,38 +120,32 @@ export default function RegisterPage() {
             >
               <Typography.Title id="offeringTxt">goodSeva</Typography.Title>
               <Typography.Title level={2} id="Text-Register">
-                REGISTER
+                LOGIN
               </Typography.Title>
             </Flex>
-
-            <Typography.Title level={3} id="quote">
+            <Typography.Title level={3} id="otp-above-text">
               Very good works are waiting for you
             </Typography.Title>
-            <Flex className="input-details" vertical gap={30} align="flex-end">
-              <Input
-                size="large"
-                placeholder=" Mobile Number"
-                prefix={<MobileOutlined />}
-                id="mobile-input"
-                type="number"
-                value={mobileNo}
-                onChange={(e): any => {
-                  setMobileNo(e.target.value);
-                }}
-              />
-              <Input
-                size="large"
-                placeholder=" Email"
-                prefix={<MailOutlined />}
-                id="email-input"
-                value={mail}
-                onChange={(e) => {
-                  setMail(e.target.value);
-                }}
-              />
-              <Link href={`/Register/${mobileNo}/step1`}>
-                <Button id="otp-button">Get OTP</Button>
-              </Link>
+
+            <Flex className="input-details" vertical>
+              <Flex align="flex-start" vertical justify="center">
+                <Input.OTP
+                  {...sharedProps}
+                  mask="*"
+                  size="large"
+                  id="otp-inputs"
+                />
+              </Flex>
+              <Flex justify="center" style={{ padding: 20 }} gap={50}>
+                <Link
+                  href="/Register"
+                  id="link-to-register"
+                  style={{ color: "#7F1126" }}
+                >
+                  Change Email/Phone number
+                </Link>
+                <Button id="otp-button">Verify</Button>
+              </Flex>
             </Flex>
             <div className="providers">
               <Divider style={{ borderColor: "lightgray" }}>
@@ -164,11 +170,11 @@ export default function RegisterPage() {
               </Flex>
             </div>
           </Col>
-          <Col lg={4}></Col>
+          <Col lg={4} sm={0}></Col>
         </Row>
       </div>
       <Row>
-        <Col lg={24} style={{ width: "100%", height: 50 }} xs={0} sm={0}></Col>
+        <Col lg={24} style={{ width: "100%", height: 50 }}></Col>
       </Row>
     </div>
   );

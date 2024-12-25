@@ -1,15 +1,21 @@
-#offeringTxt {
-  color: rgb(111, 25, 25);
-}
-
 @media screen and (min-device-width: 390px) and (max-device-width: 882px) {
+  #offeringTxt {
+    color: rgb(111, 25, 25);
+    font-size: 30px;
+    font-family: El Messiri;
+  }
+
+  #otp-above-text {
+    font-size: 18;
+    text-align: center;
+  }
+
   #otp-button {
     margin-top: 10px;
     margin-left: 90px;
   }
   .bg-lp-div {
     padding: 10px;
-    
   }
   .input-details {
     padding: 30;
@@ -18,6 +24,7 @@
     font-size: 30px;
     font-weight: 500;
     margin-top: 0;
+    margin-top: 18;
   }
   #otp-button {
     padding: 20;
@@ -27,14 +34,29 @@
     height: 42px;
     border-radius: 6px;
   }
-   .left-register-div {
+  .left-register-div {
     background-color: #7f1126;
     border-radius: 12px;
     padding: 10px;
   }
+  .providers {
+    padding: 20;
+    margin: 0;
+  }
 }
 
 @media (min-width: 1024px) {
+  #offeringTxt {
+    color: rgb(111, 25, 25);
+    font-size: 48px;
+    font-family: El Messiri;
+  }
+
+  #otp-above-text {
+    font-size: 24;
+    text-align: center;
+  }
+
   #otp-button {
     padding: 20;
     background-color: #7f1126;
@@ -48,10 +70,9 @@
     margin: 10;
   }
 
-  #link-to-register{
+  #link-to-register {
     margin-top: 10px;
   }
- 
 
   #Text-Register {
     font-size: 30px;
@@ -73,10 +94,7 @@
     padding: 10px;
   }
 }
-.bg-register-card {
-  width: "fit-content";
-  height: "fit-content";
-}
+
 
 .bg-lp {
   background-color: #7f1126;
